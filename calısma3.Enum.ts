@@ -13,7 +13,7 @@ function tavsiyeVer(durum: HavaDurumu) {
     } else if (durum === HavaDurumu.Bulutlu) {
         console.log("Montunu yanına al");
     }
-}
+} 
 
 // Fonksiyonu çağırmayı unutma:
 tavsiyeVer(HavaDurumu.Gunesli);
