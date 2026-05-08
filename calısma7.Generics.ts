@@ -10,7 +10,7 @@ const ilkIsim = ilkElemaniGetir<string>(isimler);
 console.log(`Dizinin ilk ismi: ${ilkIsim}`); // Çıktı: HardFIXER
 
 // 3. Number dizisi ile kullanımı
-const plakalar = [44, 34, 6, 51];
+const plakalar = [44, 34, 6, 51]; 
 const ilkPlaka = ilkElemaniGetir<number>(plakalar);
 console.log(`Dizinin ilk plakası: ${ilkPlaka}`); // Çıktı: 44
 
