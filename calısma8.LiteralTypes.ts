@@ -47,3 +47,32 @@ const yeniSirket: Sirket = {
 
 console.log(`${yeniSirket.isim} şirketinin durumu kontrol ediliyor...`);
 durumKontrol(yeniSirket.durum);
+
+
+
+
+
+// 2. örnek
+// 1. Literal Type ve Type Alias Birleşimi
+// Sadece bu 3 kelimeden birini kabul eder. Başka bir şey yazarsan TS kızar.
+type ZorlukSeviyesi = "Easy" | "Medium" | "Hard";
+
+// 2. Bir Obje Yapısı Kuruyoruz
+type OyunAyarlari = {
+    kullaniciAdi: string;
+    zorluk: ZorlukSeviyesi; // Yukarıda tanımladığımız özel tipi kullandık
+    sesSeviyesi: number;
+};
+
+// 3. Uygulama
+const oyuncuAyari: OyunAyarlari = {
+    kullaniciAdi: "HardFIXER",
+    zorluk: "Hard",    // "Normal" yazarsan hata verir!
+    sesSeviyesi: 80
+};
+
+function ayarGoster(ayar: OyunAyarlari) {
+    console.log(`${ayar.kullaniciAdi} şu an ${ayar.zorluk} modunda oynuyor.`);
+}
+
+ayarGoster(oyuncuAyari);
